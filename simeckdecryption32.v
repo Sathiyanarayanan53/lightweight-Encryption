@@ -1,0 +1,40 @@
+module simeckdecryption32 (inp,key,out);
+input[31:0]inp;
+input[15:0]key;
+output[31:0]out;
+wire [31:0] k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,k11,k12,k13,k14,k15,k16,k17,k18,k19,k20,k21,k22,k23,k24,k25,k26,k27,k28,k29,k30,k31;
+
+simeckdecryption s1(inp,key,k1);
+simeckdecryption s2(k1,key,k2);
+simeckdecryption s3(k2,key,k3);
+simeckdecryption s4(k3,key,k4);
+simeckdecryption s5(k4,key,k5);
+simeckdecryption s6(k5,key,k6);
+simeckdecryption s7(k6,key,k7);
+simeckdecryption s8(k7,key,k8);
+simeckdecryption s9(k8,key,k9);
+simeckdecryption s10(k9,key,k10);
+simeckdecryption s11(k10,key,k11);
+simeckdecryption s12(k11,key,k12);
+simeckdecryption s13(k12,key,k13);
+simeckdecryption s14(k13,key,k14);
+simeckdecryption s15(k14,key,k15);
+simeckdecryption s16(k15,key,k16);
+simeckdecryption s17(k16,key,k17);
+simeckdecryption s18(k17,key,k18);
+simeckdecryption s19(k18,key,k19);
+simeckdecryption s20(k19,key,k20);
+simeckdecryption s21(k20,key,k21);
+simeckdecryption s22(k21,key,k22);
+simeckdecryption s23(k22,key,k23);
+simeckdecryption s24(k23,key,k24);
+simeckdecryption s25(k24,key,k25);
+simeckdecryption s26(k25,key,k26);
+simeckdecryption s27(k26,key,k27);
+simeckdecryption s28(k27,key,k28);
+simeckdecryption s29(k28,key,k29);
+simeckdecryption s30(k29,key,k30);
+simeckdecryption s31(k30,key,k31);
+simeckdecryption s32(k31,key,out);
+
+endmodule

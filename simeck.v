@@ -1,0 +1,16 @@
+module simeck(inp,key,out);
+input[31:0]inp;
+input[15:0]key;
+output[31:0]out;
+wire [15:0] p1,p2,d1,d2,d3,d4,d5;
+
+assign p1=inp[15:0];
+assign p2=inp[31:16];
+assign d1=(p2<<5)|(p2>>11);
+assign d2=p2&d1;
+assign d3=p1^d2;
+assign d4=(p2<<1)|(p2>>15);
+assign d5=d3^d4^key;
+assign out={d5,p2};
+
+endmodule
